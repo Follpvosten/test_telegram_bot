@@ -1,0 +1,9 @@
+[package]
+name = "test_telegram_bot"
+version = "0.1.0"
+authors = ["Follpvosten"]
+
+[dependencies]
+telebot = "*"
+tokio-core = "*"
+futures = "*"
