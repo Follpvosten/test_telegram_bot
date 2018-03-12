@@ -7,3 +7,4 @@ authors = ["Follpvosten"]
 telebot = "*"
 tokio-core = "*"
 futures = "*"
+failure = "*"
