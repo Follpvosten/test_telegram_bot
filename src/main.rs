@@ -26,7 +26,7 @@ fn main() {
         .unwrap();
 
     println!("Loading config file {:?}...", config_filename);
-    let bot_config: Config = read_config_file(&config_filename);
+    let bot_config = read_config_file(&config_filename).expect("Error loading config file");
 
     println!("Creating bot...");
     let mut lp = Core::new().unwrap();
