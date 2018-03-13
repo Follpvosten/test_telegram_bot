@@ -17,12 +17,11 @@ fn main() {
     println!("Hello, world!");
 
     // TELEGRAM_BOT_TOKEN has to be set, of course
-    let bot_token = env::var("TELEGRAM_BOT_KEY");
-    if bot_token.is_err() {
-        panic!("Please set the environment variable TELEGRAM_BOT_KEY");
-    }
+    let bot_token = env::var("TELEGRAM_BOT_KEY")
+        .expect("Please set the environment variable TELEGRAM_BOT_KEY!");
+
     let mut lp = Core::new().unwrap();
-    let my_bot = RcBot::new(lp.handle(), &bot_token.unwrap()).update_interval(200);
+    let my_bot = RcBot::new(lp.handle(), &bot_token).update_interval(200);
 
     let handle = my_bot.new_cmd("/start").and_then(handle_start);
 
