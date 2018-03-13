@@ -4,7 +4,10 @@ version = "0.1.0"
 authors = ["Follpvosten"]
 
 [dependencies]
-telebot = "*"
-tokio-core = "*"
-futures = "*"
-failure = "*"
+telebot = "0.2.7"
+tokio-core = "0.1.14"
+futures = "0.1.18"
+failure = "0.1.1"
+toml = "0.4.5"
+serde = "1.0.29"
+serde_derive = "1.0.29"
